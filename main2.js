@@ -92,8 +92,6 @@ function setup() {
       "<button class='qs_button' onclick='save-D()'>SaveD</button>&nbsp;" 
     )
     .addHTML("Status", "Stop")
-    .addText("Nodes", "")
-    .addText("Nodes Num", "")
     .setWidth(ui_offs - 10)
     .setDraggable(false)
     .setCollapsible(false);
@@ -184,17 +182,13 @@ function tracer() {
     if (count > ui_max || best < 0 || stop || stop_f) {
       running = false;
       count--;
-      setStatus("Done! " + count + " lines, " + Math.round(length / 100) + " m, max overlap " + Math.max(...overlaps) + ' in ' + ((Date.now() - tmr) / 1000).toFixed(1) + ' seconds');
-      ui_set("Nodes", temp_arry);
-      nodes.push(ui_amount & 0xff);
-      ui_set("Nodes Num", nodes);
       
       for (i= 0; i < temp_arry.length-1; i++){
         tempArray = tempArray + `${temp_arry[i]} ${temp_arry[i+1]} \n`
       }
       if (path<maxPath)
       {
-        console.log(path)
+        
         if(path == 0){
           tempArrayA = tempArray;
           nodeArrayA = nodes.slice();
