@@ -89,7 +89,7 @@ function setup() {
     "<button class='qs_button' onclick='save_A()'>SaveA</button>&nbsp;" +
       "<button class='qs_button' onclick='save_B()'>SaveB</button>&nbsp;" +
       "<button class='qs_button' onclick='save_C()'>SaveC</button>&nbsp;" +
-      "<button class='qs_button' onclick='save-D()'>SaveD</button>&nbsp;" 
+      "<button class='qs_button' onclick='save_D()'>SaveD</button>&nbsp;" 
     )
     .addHTML("Status", "Stop")
     .setWidth(ui_offs - 10)
